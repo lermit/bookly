@@ -29,6 +29,7 @@ app = FastAPI(
     title='Bookly',
     description='A simple book management API',
     version=version,
+    docs_url='/',
 )
 
 

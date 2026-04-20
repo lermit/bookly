@@ -7,6 +7,8 @@ class CustomAuthMiddleWare(BaseHTTPMiddleware):
     async def dispatch(self, request: Request, call_next):
         # Allow unauthenticated access to specific routes
         allowed_paths = [
+            "/",
+            "/openapi.json",
             "/api/v1/auth/login",
             "/api/v1/auth/signup",
             "/api/v1/auth/verify",
